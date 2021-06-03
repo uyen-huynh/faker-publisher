@@ -1,0 +1,33 @@
+{
+  "name": "publisher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/uyen-huynh/faker-publisher.git",
+  "author": "Uyen Huynh <uyennhuynhuyen@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.4",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "faker": "^5.5.3",
+    "mqtt": "^4.2.6",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "yarn run build && node dist",
+    "restart": "rimraf dist && yarn run start",
+    "dev": "nodemon --exec yarn run restart"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/register": "^7.13.16",
+    "@babel/runtime": "^7.14.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "prettier": "^2.3.0"
+  }
+}
